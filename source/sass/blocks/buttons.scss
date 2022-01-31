@@ -1,0 +1,16 @@
+.main-btn {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.0075em;
+  border: 1px solid currentColor;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: clamp(120px, 10.903vw, 157px);
+  height: clamp(35px, 2.778vw ,40px);
+}
