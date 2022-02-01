@@ -3,7 +3,7 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 158px 89%;
+    grid-template-columns: 158px calc(100% - 188px);
   }
 }
 

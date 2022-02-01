@@ -1,0 +1,145 @@
+.home-slider-sec {
+  padding: clamp(20px, 2.778vw, 40px) 0;
+}
+
+.home-slider {
+  overflow: initial;
+  box-sizing: border-box;
+  position: relative;
+
+
+  &__slide {
+    min-height: Min(31.25vw, 450px);
+    padding: clamp(30px, 5.972vw, 86px) 0 clamp(30px, 5.972vw, 86px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .8s;
+
+    &.swiper-slide-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &__container {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: clamp(15px,2.083vw, 30px);
+  }
+
+  &__arrows {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(20px, 2.639vw, 38px);
+    width: clamp(20px, 2.639vw, 38px);
+    border-radius: 50%;
+    background-color: $bg--w;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+
+    svg {
+      fill: $text--a;
+    }
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: .3;
+    }
+  }
+
+  &__prev {
+    left: 20px;
+  }
+
+  &__next {
+    right: 20px;
+  }
+
+  &__pagination {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 34px;
+    display: flex;
+    grid-gap: 12px;
+    z-index: 20;
+
+    .swiper-pagination-bullet  {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: $bg--w;
+      border: 2px solid transparent;
+      transition: all .4s;
+
+      &.swiper-pagination-bullet-active {
+        border-color: $bg--w;
+        background-color: $bg--c;
+      }
+    }
+  }
+}
+
+
+
+
+
+.home-description {
+
+  &__top {
+    display: flex;
+    grid-gap: clamp(15px,2.083vw, 30px);
+    align-items: center;
+    margin-bottom: 23px;
+  }
+
+  &__description {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    font-size: clamp(18px, 1.736vw, 25px);
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.234752px;
+    text-transform: uppercase;
+    color: $bg--f;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 900;
+    font-size: clamp(23px, 2.361vw, 34px);
+    line-height: 120%;
+    letter-spacing: 0.234752px;
+    margin-bottom: 30px;
+    color: $bg--f;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: clamp(14px, 1.042vw, 15px);
+    line-height: 120%;
+    letter-spacing: 0.234752px;
+    color: $bg--f;
+  }
+}
+
