@@ -1,0 +1,36 @@
+.filter-buttons {
+  display: flex;
+  align-items: center;
+  background: #EBF2FF;
+  width: fit-content;
+  border-radius: 3.75399px;
+
+  &__btn {
+    width: 63px;
+    height: 33px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      fill: #787885;
+      transition: all .4s;
+    }
+
+    &.active {
+      background: #FFFFFF;
+      box-shadow: 0px 0.938498px 1.877px rgba(27, 78, 163, 0.24), 0px 1.877px 3.75399px rgba(41, 121, 255, 0.24);
+      border-radius: 3.75399px;
+
+      svg {
+        transform: scale(1.1);
+        fill: #2979FF;
+      }
+    }
+  }
+
+}
+
+
