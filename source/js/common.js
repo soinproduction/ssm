@@ -1,3 +1,12 @@
+const btnMinus = document.querySelectorAll('.number-minus');
+const btnPlus = document.querySelectorAll('.number-plus');
+const btnFavorite = document.querySelectorAll('.favorite-btn');
+let gridBtn = document.querySelector(".grid-button");
+let listBtn = document.querySelector(".list-button");
+let catalogBox = document.querySelector(".index-catalog-list");
+let tabParents = document.querySelectorAll("[data-parent-tabs]");
+
+
 let noveltySlider = new Swiper('.top-nav', {
   slidesPerView: 'auto',
   spaceBetween: 15,
@@ -22,12 +31,8 @@ let homeSlider = new Swiper('.home-slider', {
   pagination: {
     el: ".home-slider__pagination",
   },
-
 });
 
-let gridBtn = document.querySelector(".grid-button");
-let listBtn = document.querySelector(".list-button");
-let catalogBox = document.querySelector(".index-catalog-list");
 
 if (catalogBox) {
   gridBtn.onclick = function(e) {
@@ -43,12 +48,8 @@ if (catalogBox) {
     gridBtn.classList.remove('active');
     catalogBox.classList.add('row-item');
   }
-
-
 }
 
-
-let tabParents = document.querySelectorAll("[data-parent-tabs]");
 
 tabParents.forEach(function (tabParent) {
   let tabNavs = tabParent.querySelectorAll("[data-tab]");
@@ -74,3 +75,28 @@ tabParents.forEach(function (tabParent) {
   }
 
 });
+
+
+
+for (const btn of btnMinus) {
+  btn.onclick = function(){
+    this.previousElementSibling.stepDown();
+    this.previousElementSibling.onchange();
+  }
+}
+
+for (const btn of btnPlus) {
+  btn.onclick = function(){
+    this.nextElementSibling.stepUp();
+    this.nextElementSibling.onchange();
+  }
+}
+
+for (const btn of btnFavorite) {
+  btn.onclick = function(){
+    btn.classList.toggle('active');
+  }
+
+}
+
+

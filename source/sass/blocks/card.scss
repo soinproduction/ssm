@@ -1,0 +1,270 @@
+.card {
+  padding: 15px 15px 15px;
+  transition: box-shadow .4s;
+  border-radius: 7.50799px;
+
+  &:hover {
+    box-shadow: 0px 0.938498px 1.877px rgba(58, 58, 68, 0.24), 0px 1.877px 3.75399px rgba(90, 91, 106, 0.24);
+
+  }
+
+  &--sale {
+    .vidget-sale {
+      display: flex;
+    }
+
+    .card-item__price-sale {
+      display: flex;
+    }
+  }
+
+  &--new {
+    .vidget-new {
+      display: flex;
+    }
+
+  }
+
+  &--recomendation {
+    .vidget-recomendation {
+      display: flex;
+    }
+  }
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 12px;
+
+  &__image {
+    position: relative;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    min-height: 214px;
+  }
+
+  &__vidget {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  &__name {
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15.016px;
+    line-height: 22px;
+    letter-spacing: 0.0275em;
+    color: $card-name;
+    overflow: hidden;
+    height: calc(22px * 3);
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    display: flex;
+    text-overflow: ellipsis;
+  }
+
+  &__check {
+    display: flex;
+    align-items: center;
+    grid-gap: 3px;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13.139px;
+    line-height: 100%;
+    letter-spacing: 0.140775px;
+    color: $text--c;
+  }
+
+  &__description {
+    margin-bottom: 7px;
+    flex-grow: 1;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__price-value {
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22.524px;
+    line-height: 100%;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  &__price-sale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 28px;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13.139px;
+    line-height: 15px;
+    letter-spacing: 0.375399px;
+    color: #C8372D;
+    border-radius: 3.7px;
+    background: rgba(250, 169, 163, 0.5);
+    display: none;
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info {
+    margin-bottom: 11px;
+  }
+
+  &__info-item {
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11.262px;
+    line-height: 143%;
+    letter-spacing: 0.018em;
+    color: #787885;
+  }
+
+  &__more {
+    width: 97.6px;
+    height: 30.03px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $bg--w;
+    border: 0.938498px solid #9DC2FF;
+    border-radius: 3.75399px;
+
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13.139px;
+    line-height: 100%;
+    letter-spacing: 0.140775px;
+    color: $text--a;
+  }
+}
+
+
+.card-vidget {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 6.5px;
+
+  &__item {
+    padding: 3.5px 11.5px;
+    border-radius: 3.75399px;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11.262px;
+    line-height: 15px;
+    align-items: center;
+    letter-spacing: 0.375399px;
+    color: $text--w;
+    display: none;
+  }
+
+  .vidget-new {
+    background-color: $vidget--c;
+  }
+
+  .vidget-sale {
+    background-color: $vidget--b;
+  }
+
+  .vidget-recomendation {
+    background-color: $vidget--d;
+  }
+}
+
+.number {
+  max-width: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__buttons {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: all .2s;
+
+    &:active {
+      transform: scale(1.05);
+    }
+  }
+
+  &__input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18.77px;
+    line-height: 30px;
+    letter-spacing: 0.140775px;
+    color: $card-name;
+  }
+}
+
+.number-plus {
+  border-color: #A9D3AB;
+}
+
+.number-minus {
+  border-color: #FAA9A3;
+}
+
+.favorite-btn {
+  width: 26.21px;
+  height: 26.21px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: $bg--w;
+  border: 0.938498px solid #9DC2FF;
+  border-radius: 3.75399px;
+  transition: all .4s;
+  svg {
+    fill: #2979FF;
+    transition: all .4s;
+  }
+
+  &.active {
+    background-color: #2979FF;
+
+    svg {
+      fill: #fff;
+      transform: scale(1.25);
+    }
+  }
+}
