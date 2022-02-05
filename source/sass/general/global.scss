@@ -131,7 +131,18 @@ input[type="number"] {
 }
 
 
+.grid-layout {
+  display: grid;
+  grid-template-columns: 335px 1fr;
+  grid-gap: 20px;
 
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 1.736vw, 25px);
+  }
+}
 
 
 

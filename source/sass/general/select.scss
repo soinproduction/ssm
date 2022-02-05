@@ -1,0 +1,135 @@
+.select {
+  position: relative;
+  width: 100%;
+
+  &--big {
+    width: 242px;
+  }
+
+  &--small {
+    width: 164px;
+  }
+}
+
+.select.is-active .select__body {
+  max-height: 500px;
+  height: auto;
+}
+
+.select.is-active {
+  .select__icon {
+    transform: scaleY(-1);
+  }
+  .select__body {
+    display: block;
+  }
+
+}
+
+.select__lable {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: 1.40775px;
+  text-transform: uppercase;
+  color: #787885;
+  padding: 1px 4px;
+  background-color: $bg--w;
+  position: absolute;
+  z-index: 20;
+  top: -20%;
+}
+
+.select__header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 33px;
+  padding: 0 10px;
+  justify-content: flex-start;
+  grid-gap: 5px;
+  background: $bg--w;
+  border: 0.938498px solid #5A5B6A;
+  border-radius: 3.75399px;
+  position: relative;
+}
+
+.select__current {
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 100%;
+  font-weight: 500;
+  color: $text--e;
+  font-family: $font-family2;
+}
+
+.select__icon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  height: 5px;
+  text-align: center;
+  width: 8px;
+  transition: all .4s;
+}
+
+.select__body {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  // border-radius: 8px;
+  padding:  0;
+  margin-top: 4px;
+}
+
+.select__item {
+
+  padding: 0 10px;
+  cursor: pointer;
+
+  span {
+    height: 22px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 4px;
+    font-family: $font-family2;
+    color: $text--e;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 100%;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.select__wrapp {
+  background: $bg--w;
+  border: 0.938498px solid #5A5B6A;
+  border-radius: 3.75399px;
+  width: 100%;
+  padding: 5px 0;
+}
+
+// .select__item:hover {
+//   span {
+
+//   }
+// }
+
+
+
+
+
+
+
+

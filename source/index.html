@@ -19,7 +19,7 @@
                     <div class="home-slider__description home-description">
                       <div class="home-description__top">
                         <span class="home-description__description">
-                          Новинка от
+                          1Новинка от
                         </span>
                         <div class="home-description__logo">
                           <picture>
@@ -50,7 +50,7 @@
                     <div class="home-slider__description home-description">
                       <div class="home-description__top">
                         <span class="home-description__description">
-                          Новинка от
+                          2Новинка от
                         </span>
                         <div class="home-description__logo">
                           <picture>
@@ -81,7 +81,7 @@
                     <div class="home-slider__description home-description">
                       <div class="home-description__top">
                         <span class="home-description__description">
-                          Новинка от
+                          3Новинка от
                         </span>
                         <div class="home-description__logo">
                           <picture>
@@ -112,7 +112,7 @@
                     <div class="home-slider__description home-description">
                       <div class="home-description__top">
                         <span class="home-description__description">
-                          Новинка от
+                          4Новинка от
                         </span>
                         <div class="home-description__logo">
                           <picture>
@@ -186,10 +186,65 @@
             <div class="filter-wrapper">
               <ul class="select-wrapper">
                 <li class="select-wrapper__item">
-                  select
+
+                  <div class='select select--big'>
+                    <div class='select__header'>
+
+                      <legend class="select__lable">
+                        Сортировать
+                      </legend>
+
+                      <span class='select__current'>Вначале - популярные</span>
+                      <div class='select__icon'>
+                        <svg width="8" height="10" >
+                          <use href='img/sprite/sprite.svg#select-arrow'></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class='select__body'>
+                      <ul class='select__wrapp'>
+                        <li class='select__item' data-choice='choosen'>
+                          <span>Вначале - популярные</span>
+                        </li>
+                        <li class='select__item' data-choice='choosen'>
+                          <span>Вначале - дорогие</span>
+                        </li>
+                        <li class='select__item' data-choice='choosen'>
+                          <span>Вначале - дешевые</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
                 </li>
                 <li class="select-wrapper__item">
-                  select
+                  <div class='select select--small'>
+                    <div class='select__header'>
+                      <legend class="select__lable">
+                        Наличие
+                      </legend>
+
+                      <span class='select__current'>Все варианты</span>
+                      <div class='select__icon'>
+                        <svg width="8" height="10" >
+                          <use href='img/sprite/sprite.svg#select-arrow'></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class='select__body'>
+                      <ul class='select__wrapp'>
+                        <li class='select__item' data-choice='choosen'>
+                          <span>Нет в наличии</span>
+                        </li>
+                        <li class='select__item' data-choice='choosen'>
+                          <span>Под заказ</span>
+                        </li>
+                        <li class='select__item' data-choice='choosen'>
+                          <span>Есть в наличии</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
               </ul>
 
@@ -2985,7 +3040,10 @@
 
   @@include('_footer.html',{})
   <script src="js/swiper.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
   <script src="js/common.min.js"></script>
 </body>
 
 </html>
+
+

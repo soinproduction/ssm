@@ -5,7 +5,13 @@ let gridBtn = document.querySelector(".grid-button");
 let listBtn = document.querySelector(".list-button");
 let catalogBox = document.querySelector(".index-catalog-list");
 let tabParents = document.querySelectorAll("[data-parent-tabs]");
+const select = document.querySelectorAll(".select"); // select-box
 
+
+const btnModalQuestion = document.querySelectorAll('[data-question]') // кнопка модального окна 'задать вопрос'
+
+
+// init sliders
 
 let noveltySlider = new Swiper('.top-nav', {
   slidesPerView: 'auto',
@@ -22,7 +28,8 @@ let noveltySlider = new Swiper('.top-nav', {
 let homeSlider = new Swiper('.home-slider', {
   slidesPerView: 1,
   spaceBetween: 15,
-  speed: 1200,
+  speed: 800,
+  effect: 'fade',
   loop: false,
   navigation: {
     nextEl: ".home-slider__next",
@@ -33,6 +40,10 @@ let homeSlider = new Swiper('.home-slider', {
   },
 });
 
+// init sliders
+
+
+// filter catalog buttons
 
 if (catalogBox) {
   gridBtn.onclick = function(e) {
@@ -50,6 +61,9 @@ if (catalogBox) {
   }
 }
 
+// filter catalog buttons
+
+// tabs
 
 tabParents.forEach(function (tabParent) {
   let tabNavs = tabParent.querySelectorAll("[data-tab]");
@@ -77,6 +91,10 @@ tabParents.forEach(function (tabParent) {
 });
 
 
+// tabs
+
+
+// counter
 
 for (const btn of btnMinus) {
   btn.onclick = function(){
@@ -92,6 +110,11 @@ for (const btn of btnPlus) {
   }
 }
 
+// counter
+
+
+// like button
+
 for (const btn of btnFavorite) {
   btn.onclick = function(){
     btn.classList.toggle('active');
@@ -99,4 +122,34 @@ for (const btn of btnFavorite) {
 
 }
 
+// like button
 
+// select
+
+if (select.length) {
+  select.forEach((item) => {
+    const selectCurrent = item.querySelector(".select__current");
+    item.addEventListener("click", (event) => {
+      const el = event.target.dataset.choice;
+      const text = event.target.innerText;
+      if (el === "choosen" && selectCurrent.innerText !== text) {
+        selectCurrent.innerText = text;
+      }
+      item.classList.toggle("is-active");
+    });
+  });
+}
+
+// select
+
+
+const galleryItems = document.querySelectorAll('.gallery-list');
+
+for (const galleryItem of galleryItems) {
+  lightGallery(galleryItem);
+}
+
+// lightGallery(document.getElementById('lightgallery'), {
+//   mode: 'lg-fade',
+//   cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)'
+// });
