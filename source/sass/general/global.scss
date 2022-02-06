@@ -110,7 +110,7 @@ input[type="number"] {
   z-index: 20;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .container {
@@ -142,7 +142,16 @@ input[type="number"] {
     flex-direction: column;
     grid-gap: clamp(20px, 1.736vw, 25px);
   }
+
+  &__box {
+    max-width: 1050px;
+  }
 }
+
+
+// aside * {
+//   transition: max-height .3s !important;
+// }
 
 
 

@@ -1,0 +1,79 @@
+.aside-accordion {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+
+
+  &__top {
+    display: flex;
+    align-items: center;
+    grid-gap: 15px;
+    cursor: pointer;
+    user-select: none;
+
+    svg {
+      fill: #76A9FF;
+      transition: all .4s;
+      flex-shrink: 0;
+    }
+
+    &.active {
+      svg {
+        fill: #2264D1;
+        transform: rotate(90deg);
+      }
+    }
+
+
+  }
+
+  .accordion.active + .panel {
+    height: auto;
+    max-height: 100%;
+  }
+
+
+  &__title {
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15.0635px;
+    line-height: 100%;
+    letter-spacing: 0.0275em;
+    color: $card-name;
+  }
+
+  &__subtitle {
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13.1805px;
+    line-height: 100%;
+    letter-spacing: 0.018em;
+    color: #787885;
+  }
+
+  &__box {
+    padding-left: 25px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+  }
+
+  &__box {
+    padding-top: 10px;
+  }
+
+  &__list-item {
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15.0635px;
+    line-height: 100%;
+    letter-spacing: 0.0275em;
+    color: #19191D;
+  }
+}

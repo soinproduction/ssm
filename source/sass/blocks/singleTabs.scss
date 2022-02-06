@@ -1,0 +1,50 @@
+.single-card-tabs {
+  margin-bottom: 52px;
+  padding: 0 10px;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    border-bottom: 1px solid #E3E5E5;
+  }
+
+  &__button {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    margin: 0;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 100%;
+    color: $tab-nav;
+    transition: all .2s ease-in;
+    border-bottom: 1px solid transparent;
+    position: relative;
+    z-index: 2;
+    transform: translateY(1px);
+
+    &.active {
+      font-weight: 500;
+      color: $text--a;
+      border-bottom: 1px solid currentColor;
+    }
+  }
+}
+
+
+.single-card-content {
+  padding: 26px 0 ;
+
+  &__article {
+    padding: 0;
+    grid-gap: 15px;
+  }
+
+  &__image {
+    margin-bottom: 25px;
+  }
+}
