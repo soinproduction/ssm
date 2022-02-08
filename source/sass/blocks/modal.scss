@@ -1,0 +1,339 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(39, 39, 39, 0.7);
+  z-index: -10;
+  visibility: hidden;
+  transition: .4s;
+  opacity: 0;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+  }
+}
+
+.modal {
+  visibility: hidden;
+  position: absolute;
+  z-index: -100;
+  transform: translateY(-100%) scale(0);
+  transition: all .4s;
+
+  &.active {
+    visibility: visible;
+    position: relative;
+    z-index: 2;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modals-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-cabinet {
+  max-width: 405px;
+  width: 100%;
+  background: $bg--w;
+  border-radius: 8px;
+
+  &__top {
+    padding: 22px 20px 44px;
+  }
+
+  &__bottom {
+    background: #F7F7FA;
+    border-radius: 0px 0px 8px 8px;
+    padding: 18px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__login {
+    background: $bg--w;
+    box-shadow: 0px 2px 4px rgba(27, 78, 163, 0.2), 0px 4px 8px rgba(41, 121, 255, 0.2);
+    border-radius: 4px;
+    width: 128px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.0075em;
+    color: $text--a;
+  }
+
+  &__reg {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.0075em;
+    text-decoration-line: underline;
+    color: $text--a;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.25px;
+    color: $text--b;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #2264D1;
+    margin-bottom: 36px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 28px;
+    right: 22px;
+    display: flex;
+  }
+
+  &__form-bottom {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .custom-checkbox + label {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0.0075em;
+      color: $text--e;
+      display: flex;
+      align-items: center;
+    }
+
+    .custom-checkbox+label::before {
+      width: 14px;
+      height: 14px;
+      border: 1px solid #C6CACC;
+      border-radius: 3px;
+    }
+
+    .custom-checkbox:checked+label::before {
+      background-color: rgb(129, 129, 129);
+    }
+  }
+
+  &__forgot {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.0075em;
+    text-decoration-line: underline;
+    color: $text--a;
+  }
+
+  &__fieldset{
+    padding: 0 16px;
+    margin: 0;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+
+    & + & {
+      margin-top: 27px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    width: 100%;
+    height: 40px;
+
+    input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: $text--e;
+
+      &::placeholder {
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        color: #E3E5E5;
+      }
+    }
+  }
+
+  &__legend {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 12px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 0 3px;
+    background-color: $bg--w;
+    position: absolute;
+    left: 16px;
+    transform: translateY(-60%);
+
+    b {
+      color: rgba(200, 55, 45, 0.6);
+    }
+  }
+}
+
+
+
+.modal-question {
+  max-width: 594px;
+  width: 100%;
+  border-radius: 8px;
+
+  .main-form__bottom {
+    flex-direction: row;
+
+    .main-form__button {
+      flex-shrink: 0;
+      background: #2264D1;
+      border-radius: 4px;
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: 0.0075em;
+      color: $bg--w;
+      width: 157px;
+      height: 40px;
+    }
+  }
+
+  .main-form__legend {
+    b {
+      color: rgba(200, 55, 45, 0.6);
+    }
+  }
+
+  .main-form__fieldset input, .main-form__fieldset textarea  {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #000000;
+
+    &::placeholder {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: #E3E5E5;
+    }
+  }
+
+  &__top {
+    min-height: 207px;
+    background-image: url(../img/modalBg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 33px 34px 40px;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      width: 235px;
+      height: 272px;
+      background-image: url(../img/modal-img.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      right: 63px;
+    }
+  }
+
+  &__box {
+    position: relative;
+
+    .close-btn {
+      position: absolute;
+      padding: 0;
+      border-radius: 50%;
+      background-color: $bg--w;
+      border: 1px solid $bg--w;
+      top: 25px;
+      right: 20px;
+      display: flex;
+      margin: 0;
+      z-index: 30;
+    }
+  }
+
+
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.25px;
+    color: $text--w;
+    margin-bottom: 5px;
+  }
+
+  &__subtitle {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.25px;
+    color: $text--w;
+    max-width: 245px;
+  }
+
+  &__bottom {
+    background: $bg--w;
+    padding: 30px 25px 33px;
+    border-radius: 8px;
+    margin-top: -13px;
+    position: relative;
+    z-index: 2;
+  }
+}
+

@@ -1,0 +1,133 @@
+.category-title {
+  font-family: $font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(22px, 2.5vw, 36px);
+    line-height: 100%;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.category-catalog {
+  padding: 47px 0 40px;
+  background-color: $bg--w;
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 19px;
+    // align-items: flex-start;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 35px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 25px;
+  }
+
+  &__bottom-link {
+    padding: 15px 18px 16px;
+    width: fit-content;
+    background: $bg--b;
+    border-radius: 60px;
+    margin-bottom: 17px;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-decoration-line: underline;
+    color: $text--a;
+  }
+
+}
+
+.content-box {
+  padding: 30px 20px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  // min-height: 300px;
+
+  &__title-link {
+    padding: 15px 18px 16px;
+    width: fit-content;
+    background: $bg--b;
+    border-radius: 60px;
+    margin-bottom: 17px;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-decoration-line: underline;
+    color: $text--a;
+  }
+
+  &--mini {
+    width: calc(100% / 2 - 12px);
+    min-height: clamp(250px, 20.278vw, 295px);
+
+    .content-box__title-link {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__item {
+    padding: 0 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+  }
+
+  &__subtitle-link {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    text-decoration: underline;
+    color: $text--w;
+    margin-bottom: 7px;
+  }
+
+  &__list-item {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: clamp(10px, 0.972vw, 14px);
+    line-height: 120%;
+    text-decoration: underline;
+    color: $text--w;
+
+    * {
+      text-decoration: inherit;
+      font-family: inherit;
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+
+  &:not(.content-box--mini) {
+    .content-box__inner {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 11px;
+    }
+  }
+}
