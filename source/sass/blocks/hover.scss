@@ -2,8 +2,8 @@
   transition: all .4s;
 
   &:hover {
-    color: #3881f6;
-    background: #f7faff;
+    color: #ffffff;
+    background: #3881f6;
   }
 }
 
@@ -16,12 +16,23 @@
   }
 }
 
+.main-menu__last-link {
+
+  &:hover {
+    color: rgb(0, 172, 251);
+  }
+}
+
 .content-box__list-item, .content-box__subtitle-link  {
   transition: all .4s;
 
   &:hover {
     color: #00ff0d;
   }
+}
+
+.main-menu__sub-item a:hover {
+  text-decoration: underline;
 }
 
 .header-nav__link {
@@ -99,4 +110,20 @@
 .aside-accordion__top:hover,
 .aside-accordion__list-item:hover {
   text-decoration: underline;
+}
+
+.single-card__link {
+  transition: all .4s;
+  border: 1px solid #ebf2ff;
+
+  &:hover {
+
+    background-color: #fff;
+    transform: scale(1.2);
+  }
+
+}
+
+.single-card-tabs__button:hover {
+  color: #000;
 }

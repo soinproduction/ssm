@@ -90,13 +90,13 @@
 
 .menu-parrent:hover {
   .main-menu {
-    transition-delay: .8s;
+    transition-delay: .5s;
     visibility: visible;
     opacity: 1;
   }
 
   &:after {
-    transition-delay: .3s;
+    transition-delay: .5s;
     opacity: 1;
     visibility: visible;
   }
