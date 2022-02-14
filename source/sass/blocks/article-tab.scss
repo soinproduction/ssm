@@ -221,3 +221,163 @@
     color: $text--e;
   }
 }
+
+
+@media screen and (min-width: 280px) and (max-width: 576px) {
+  .project-article {
+
+    &__top {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: 25px 0;
+      grid-template-areas:
+          "top"
+          "image"
+          "bottom";
+    }
+
+
+    &__image {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__price-table {
+      margin-left: -10px;
+      margin-right: -10px;
+      width: calc(100% + 20px);
+    }
+
+    &__price-item {
+      grid-template-columns: 60% 30%;
+      padding: 16px 10px;
+    }
+
+    &__icons {
+      grid-template-columns: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    &__icon {
+      grid-gap: 15px;
+    }
+
+    .gallery-list {
+      flex-direction: column;
+    }
+
+    &__price-title {
+      line-height: 115%;
+    }
+
+  }
+
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .project-article {
+
+    &__top {
+      display: grid;
+      grid-template-columns: 340px auto;
+      grid-gap: 25px 25px;
+      grid-template-areas:
+          "top image"
+          "top image"
+          "bottom bottom";
+    }
+
+    &__descr {
+      font-size: 16px;
+    }
+
+    &__price-table {
+      margin-left: -10px;
+      margin-right: -10px;
+      width: calc(100% + 20px);
+    }
+
+    &__price-item {
+      grid-template-columns: 60% 30%;
+      padding: 16px 10px;
+    }
+
+    &__icons {
+      grid-template-columns: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    &__icon {
+      grid-gap: 15px;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+  .project-article {
+
+    &__top {
+      grid-template-columns: 58% 40%;
+    }
+
+    &__icons {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    &__icon {
+      grid-gap: 15px;
+    }
+
+    &__icon-wrapper {
+      width: 70px;
+      height: 70px;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1240px) {
+
+  .grid-layout {
+    grid-template-columns: 320px calc(100% - 340px);
+  }
+
+  .project-article {
+
+    &__top {
+      grid-template-columns: 58% 40%;
+    }
+
+    &__icons {
+      max-width: 100%;
+      margin: 0 auto;
+      grid-gap: 15px;
+    }
+
+    &__icon {
+      grid-gap: 15px;
+      padding: 15px;
+    }
+
+    &__icon-wrapper {
+      width: 70px;
+      height: 70px;
+    }
+
+    &__icon-descr {
+      font-size: 13px;
+    }
+
+  }
+
+}

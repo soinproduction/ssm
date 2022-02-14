@@ -48,3 +48,50 @@
     margin-bottom: 25px;
   }
 }
+
+
+@media screen and (min-width: 280px) and (max-width: 576px) {
+
+  .single-card-tabs {
+    margin-bottom: 20px;
+
+    &__nav {
+      height: 32px;
+      overflow-x: scroll;
+      width: calc(100% + 30px);
+      grid-gap: 15px;
+      margin-left: -10px;
+    }
+
+    &__button {
+      font-size: 16px;
+      height: 30px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+  .single-card-tabs {
+    margin-bottom: 20px;
+
+    &__nav {
+      height: 42px;
+      overflow-x: scroll;
+      grid-gap: 15px;
+    }
+
+    &__button {
+      font-size: 18px;
+      height: 40px;
+    }
+  }
+
+  .single-card-content__image {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+}
+

@@ -1,0 +1,18 @@
+@media screen and (min-width: 320px) {
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+
+@media screen and (min-width: 280px) and (max-width: 576px) {
+
+
+
+  .main-form__fieldset--mini {
+    width: 100%;
+  }
+
+
+}

@@ -8,10 +8,25 @@
     @@include('_top-nav.html',{})
 
     <div class="container">
+
+      <div class="mobile-filter-navigation">
+        <button class="show-aside">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
       <div class="grid-layout catalog">
 
 
         <aside class="grid-layout__aside">
+
+          <button class="close-aside">
+            <svg width="22" height="23">
+              <use href='img/sprite/sprite.svg#mobileClose'></use>
+            </svg>
+          </button>
 
           <ul class="aside-accordion">
             <li class="aside-accordion__item">

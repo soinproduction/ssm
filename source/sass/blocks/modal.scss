@@ -41,13 +41,19 @@
 }
 
 .modal-cabinet {
-  max-width: 405px;
-  width: 100%;
-  background: $bg--w;
-  border-radius: 8px;
+
+
+  &__box {
+    width: 405px;
+    background: $bg--w;
+    border-radius: 8px;
+    margin: auto;
+
+  }
 
   &__top {
     padding: 22px 20px 44px;
+    position: relative;
   }
 
   &__bottom {
@@ -103,7 +109,7 @@
 
   .close-btn {
     position: absolute;
-    top: 28px;
+    top: 27px;
     right: 22px;
     display: flex;
   }
@@ -337,3 +343,27 @@
   }
 }
 
+@media screen and (min-width: 280px) and (max-width: 768px) {
+  .modal-question .main-form__bottom {
+    flex-direction: column;
+  }
+
+  .modal{
+    height: 100%;
+
+    padding: 30px 0;
+    overflow-y: scroll;
+
+    &.active {
+      transform: translateY(14%) scale(1);
+    }
+  }
+
+  .modal-cabinet__box {
+    width: 320px;
+  }
+
+  .modal-question__top:before {
+    display: none;
+  }
+}

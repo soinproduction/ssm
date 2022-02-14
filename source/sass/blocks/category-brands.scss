@@ -58,3 +58,14 @@
     }
   }
 }
+
+
+@media screen and (min-width: 280px) and (max-width: 576px) {
+  .category-brands {
+    padding: 20px 0 10px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -5,10 +5,8 @@
   z-index: 50;
   left: 0;
   visibility: hidden;
-  transform: translateX(-100vw);
+  opacity: 0;
   transition: .5s;
-
-
 
 
   &__list {
@@ -76,12 +74,12 @@
     top: 100%;
     left: -100vw;
     right: -100vw;
-    height: calc(100vh * 3);
+    height: calc(100vh * 2);
     background: rgba(0, 0, 0, 0.2);
     z-index: 6;
     opacity: 0;
-    transition: all .4s;
-    transition-delay: .5s;
+    transition: all .6s;
+    // transition-delay: .5s;
     pointer-events: none;
     visibility: hidden;
   }
@@ -92,11 +90,13 @@
 
 .menu-parrent:hover {
   .main-menu {
+    transition-delay: .8s;
     visibility: visible;
-    transform: translateX(0);
+    opacity: 1;
   }
 
   &:after {
+    transition-delay: .3s;
     opacity: 1;
     visibility: visible;
   }

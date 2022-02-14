@@ -1,9 +1,5 @@
 .single-card {
 
-
-
-
-
   &__top {
     display: flex;
     justify-content: space-between;
@@ -130,7 +126,7 @@
     margin: 0;
   }
 
-  &__slider-bottom__image {
+  &__slider-bottom__image, &__slider-bottom .swiper-slide {
     width: 70px;
     height: 70px;
     display: flex;
@@ -444,4 +440,250 @@
     height: 21px;
     font-size: 9px;
   }
+}
+
+
+@media screen and (min-width: 280px) and (max-width: 576px) {
+
+
+  .single-card {
+    &__top {
+      grid-gap: 20px;
+    }
+
+    &__links {
+      flex-direction: column;
+    }
+
+    &__grid-inner {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 40px;
+    }
+
+    &__slider-bottom__image {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    &__grid-item {
+      max-width: 100%;
+    }
+
+    &__slider-wrapper {
+      margin-left: -5px;
+      margin-right: -5px;
+      width: calc(100% + 10px);
+    }
+
+    &__grid-item:nth-child(2) {
+      padding: 0;
+    }
+
+    &__grid-box {
+      justify-content: space-between;
+    }
+
+
+  }
+
+}
+
+@media screen and (min-width: 280px) and (max-width: 1400px) {
+  .grid-layout__inner {
+    overflow-x: hidden;
+
+    .more-card__slider {
+      padding: 0 5px;
+    }
+  }
+
+
+  .more-card {
+
+    &__slider {
+      padding: 0 10px;
+      overflow: initial;
+      margin-left: -10px;
+      margin-right: -10px;
+      width: calc(100% + 20px);
+      background: $bg--w;
+      box-shadow: none;
+      border-radius: 8px;
+    }
+
+
+    .swiper-slide {
+      max-width: 260px;
+      width: 100%;
+    }
+
+    .card {
+      box-shadow: 0px 1px 2px rgba(58, 58, 68, 0.24), 0px 2px 4px rgba(90, 91, 106, 0.24);
+      width: 100%;
+      min-height: 420px;
+
+      &__price {
+        min-height: 25px;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+
+  .single-card {
+    &__top {
+      grid-gap: 20px;
+    }
+
+    &__links {
+      flex-direction: column;
+    }
+
+    &__grid-inner {
+      grid-template-columns: 45% 1fr;
+      justify-content: space-between;
+    }
+
+    &__slider-bottom__image {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    &__grid-item {
+      max-width: 100%;
+    }
+
+    &__slider-wrapper {
+      margin-left: -5px;
+      margin-right: -5px;
+      width: calc(100% + 10px);
+    }
+
+    &__grid-item:nth-child(2) {
+      padding: 0;
+    }
+
+    &__grid-box {
+      justify-content: space-between;
+    }
+
+    &__price {
+      font-size: 33px;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+
+  .single-card {
+
+    &__grid-inner {
+      grid-template-columns: 50% 1fr;
+      justify-content: space-between;
+      grid-gap: 15px;
+    }
+
+    &__slider-bottom__image {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    &__grid-item {
+      max-width: 100%;
+    }
+
+    &__slider-wrapper {
+      margin-left: -5px;
+      margin-right: -5px;
+      width: calc(100% + 10px);
+    }
+
+    &__grid-item:nth-child(2) {
+      padding: 0;
+    }
+
+    &__grid-box {
+      justify-content: space-between;
+    }
+
+    &__price {
+      font-size: 33px;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1240px) {
+
+  .single-card {
+
+    &__grid-inner {
+      grid-template-columns: 45% 1fr;
+      justify-content: space-between;
+    }
+
+    &__slider-bottom__image {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    &__grid-item {
+      max-width: 100%;
+    }
+
+    &__slider-wrapper {
+      margin-left: -5px;
+      margin-right: -5px;
+      width: calc(100% + 10px);
+    }
+
+    &__grid-item:nth-child(2) {
+      padding: 0;
+    }
+
+    &__grid-box {
+      justify-content: space-between;
+    }
+
+    &__price {
+      font-size: 33px;
+    }
+
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+  .grid-layout__inner {
+    padding: 5px 5px;
+    margin-left: -5px;
+    margin-right: -5px;
+    width: calc(100% + 10px);
+  }
+
 }

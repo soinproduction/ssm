@@ -1,0 +1,102 @@
+.main-menu__link {
+  transition: all .4s;
+
+  &:hover {
+    color: #3881f6;
+    background: #f7faff;
+  }
+}
+
+.content-box__title-link, .category-catalog__bottom-link{
+  transition: all .4s;
+
+  &:hover {
+    color: #ffffff;
+    background: #377ecf;
+  }
+}
+
+.content-box__list-item, .content-box__subtitle-link  {
+  transition: all .4s;
+
+  &:hover {
+    color: #00ff0d;
+  }
+}
+
+.header-nav__link {
+  transition: all .4s;
+
+  &:hover {
+    color: #3881f6;
+  }
+}
+
+.contact-block__btn {
+  transition: all .4s;
+
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.select__item {
+  transition: all .4s;
+
+  &:hover {
+    background: #cecece7a;
+  }
+}
+
+
+.main-form {
+
+  input, textarea {
+    transition: all .3s;
+  }
+
+  input:focus, textarea:focus  {
+    border: 1.93834px solid rgba(253, 2, 2, 0.945);
+  }
+
+}
+
+.main-form__button,
+.basket-btn,
+.card-item__more {
+  transition: all .3s;
+
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(27, 78, 163, 0.3), 0px 4px 8px rgba(41, 121, 255, 0.3);
+  }
+}
+
+.project-slider__buttons {
+
+
+  button{
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.document-box__link:hover {
+  text-decoration: none;
+}
+
+.sidebar-vidget__btn, .aside-filters__reset {
+  transition: all .3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+}
+
+
+.aside-accordion__top:hover,
+.aside-accordion__list-item:hover {
+  text-decoration: underline;
+}

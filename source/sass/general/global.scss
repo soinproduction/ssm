@@ -133,7 +133,7 @@ input[type="number"] {
 
 .grid-layout {
   display: grid;
-  grid-template-columns: 335px 1fr;
+  grid-template-columns: 335px calc(100% - 355px);
   grid-gap: 20px;
 
 
@@ -145,6 +145,33 @@ input[type="number"] {
 
   &__box {
     max-width: 1050px;
+    position: relative;
+    z-index: 2;
+  }
+
+
+  @media screen and (max-width:1050px) {
+    position: relative;
+    grid-template-columns: 100%;
+
+    &__aside {
+      max-width: 320px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background-color: #fff;
+      z-index: 5;
+      left: -10px;
+      padding: 50px 10px 50px;
+      transform: translateX(-120%);
+      transition: all .4s;
+      box-shadow: 8px 0px 19px 6px  rgba(0, 0, 0, 0.22);
+      border-radius: 0 20px 20px 0;
+
+      &.active {
+        transform: translate(0);
+      }
+    }
   }
 }
 
