@@ -419,6 +419,20 @@ for (const gallerySlide of gallerySlides) {
   });
 }
 
+const galleryTabs = document.querySelectorAll(".single-card-content__article");
+for (const galleryTab of galleryTabs) {
+  lightGallery(galleryTab, {
+    mode: "lg-fade",
+    cssEasing: "cubic-bezier(0.25, 0, 0.25, 1)",
+    download: false,
+    keyPress: false,
+    controls: false,
+    counter: false,
+    enableDrag: false,
+    enableTouch: false
+  });
+}
+
 if (overlay) {
   overlay.addEventListener('click', function(e) {
     e.stopPropagation();

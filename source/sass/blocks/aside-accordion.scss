@@ -3,6 +3,10 @@
   flex-direction: column;
   grid-gap: 10px;
 
+  @media screen and (max-width: 1050px) {
+    display: none;
+  }
+
 
   &__top {
     display: flex;

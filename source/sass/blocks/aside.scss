@@ -94,6 +94,11 @@
 
 .sidebar-vidget {
 
+  @media screen and (max-width: 1050px) {
+    display: none;
+  }
+
+
   &__image {
     position: relative;
     border-radius: 4px 4px 0 0;

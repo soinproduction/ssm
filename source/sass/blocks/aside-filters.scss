@@ -1,4 +1,8 @@
 .aside-filters {
+  @media screen and (max-width: 1050px) {
+    display: flex;
+    flex-direction: column;
+  }
 
 
   &__reset {
@@ -16,6 +20,21 @@
     font-size: 13.1805px;
     letter-spacing: 0.706101px;
     color: $text--a;
+
+    @media screen and (max-width: 1050px) {
+      max-width: 100%;
+      width: 100%;
+      height: 45px;
+      font-size: 14px;
+      margin:20px 0 0;
+      order: 3;
+
+      &:hover {
+        transform: scale(1) !important;
+        color: #fff;
+        background-color: $bg--c;
+      }
+    }
   }
 
   &__select {
@@ -37,6 +56,23 @@
     svg {
       flex-shrink: 0;
       fill: #2264D1;
+    }
+
+    @media screen and (max-width: 1050px) {
+      margin-bottom: 20px;
+
+      .select__header {
+        height: 50px;
+      }
+
+      .select__current {
+        font-size: 15px;
+      }
+
+      .select__item span {
+        height: 30px;
+        font-size: 13px;
+      }
     }
   }
 

@@ -12,46 +12,37 @@
 
 .show-aside {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 40px;
+  grid-gap: 10px;
+  justify-content: center;
+  height: 33px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid currentColor;
+  border-radius: 3.75399px;
+  align-items: center;
+  max-width: 320px;
   grid-gap: 6px;
   width: 100%;
+  color: $text--c;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  transition: all .4s;
 
-  span {
-    display: block;
-    height: 4px;
-    transition: all .4s;
-    background-color: $bg--c;
-
-    &:nth-child(1) {
-      width: 100%;
-    }
-
-    &:nth-child(2) {
-      width: 60%;
-    }
-
-    &:nth-child(3) {
-      width: 20%;
-    }
+  @media screen and (max-width: 575px) {
+    max-width: 100%;
   }
 
+  svg {
+    fill:  currentColor;
+  }
+
+
   &.active {
-    span {
-
-      &:nth-child(1) {
-        width: 100%;
-      }
-
-      &:nth-child(2) {
-        width: 100%;
-      }
-
-      &:nth-child(3) {
-        width: 100%;
-      }
-    }
+    background-color: $text--c;
+    color: #fff;
   }
 }
 
