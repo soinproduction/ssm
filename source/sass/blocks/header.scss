@@ -315,9 +315,6 @@ header {
     padding: 0 46px;
   }
 
-  header {
-    padding-top: 10px;
-  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
@@ -364,7 +361,6 @@ header {
 
   }
 
-
   .search-form {
     margin: 0 auto;
   }
@@ -389,6 +385,18 @@ header {
   .burger {
     grid-area: burger;
     align-self: center;
+  }
+
+  header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid rgb(143, 143, 143);
+  }
+
+  body {
+    margin-top: 100px;
   }
 
   .header-logo {

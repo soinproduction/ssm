@@ -16,7 +16,7 @@ const mobileFilterBtnHide = document.querySelector(".close-aside");
 const mobileFilterBtnShow = document.querySelector(".show-aside");
 const sideBar = document.querySelector(".grid-layout__aside");
 
-if (sideBar) {
+if (mobileFilterBtnShow) {
   mobileFilterBtnShow.addEventListener('click', function(){
     mobileFilterBtnShow.classList.toggle('active');
     sideBar.classList.toggle('active');

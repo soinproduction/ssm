@@ -1,6 +1,8 @@
 .pagination {
   margin: 0 auto;
 
+
+
   &__list {
     display: flex;
     align-items: center;
@@ -45,4 +47,37 @@
       opacity: 0.38;
     }
   }
+}
+
+
+.upload-more {
+  margin: 0 auto;
+  border: 1px solid #37833B;
+  box-sizing: border-box;
+  border-radius: 4px;
+  justify-content: center;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  display: none;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.0075em;
+  color: #37833B;
+  width: 157px;
+  height: 40px;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .pagination__list {
+      display: none;
+    }
+
+    .upload-more {
+      display: flex;
+    }
+
 }
