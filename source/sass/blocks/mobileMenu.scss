@@ -2,10 +2,16 @@
   .mobile-menu-wrapper {
     display: none;
   }
+
+  .mobile-basket {
+    display: none;
+  }
+
+
 }
 
 .mobile-menu-wrapper {
-  max-width: 320px;
+  max-width: 400px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -17,34 +23,96 @@
   padding: 16px;
   left: -120%;
   transition: left .5s cubic-bezier(0.68, 0.55, 0.265, .55);
-  height: 100%;
+  height: 100vh;
   overflow-y: scroll;
 
   &.animate {
     left: 0;
   }
 }
+.mobile-catalog-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
 
 .mobile-menu {
+  height: 100%;
 
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    grid-gap: 20px;
+    padding: 8px 10px;
+    margin-left: -16px;
+    margin-right: -16px;
+    background: rgba(237, 237, 240, 0.45);
+
+    .basket-wrapper {
+      grid-gap: 8px;
+    }
+
+    .search-form__input {
+      padding: 0 20px 0 25px;
+      font-size: 12px;
+    }
+
+    .search-form .search-btn {
+      width: 14px;
+      left: 9px;
+      svg {
+        width: 100%;
+      }
+    }
+
+    .basket-btn__count {
+      top: 2px;
+      right: 2px;
+      width: 15px;
+      height: 15px;
+      font-size: 12px;
+    }
+
+    .basket-btn {
+      font-size: 12px;
+      height: 25px;
+      width: 60px;
+    }
+
+    .login-btn {
+      font-size: 12px;
+    }
+  }
 
   &__top {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: 15px;
   }
 
   &__logo {
-    max-width: 90px;
+    max-width: 70%;
+    display: flex;
   }
 
   &__midlle {
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    align-items: flex-end;
+    padding-top: 45px;
+    position: relative;
+
+
+    .contact-block__btn {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      max-width: 100%;
+      left: 0;
+    }
   }
 
   &__login {
@@ -99,13 +167,32 @@
 
   .mobile-catalog {
     position: absolute;
+    top: 46px;
     transform: translateX(-120%);
     transition: all .4s;
-
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
     &.active {
       transform: translateX(0);
       padding-bottom: 40px;
     }
+
+  }
+
+  .main-menu__sub-item a {
+    background: #EBF2FF;
+    border-radius: 60px;
+    padding: 12px 15px 12px;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-decoration-line: underline;
+    color: $text--a;
+    margin-bottom: 12px;
   }
 
   .mobile-catalog__list {
@@ -115,15 +202,16 @@
     padding: 0;
     grid-gap: 0;
 
+
   }
   .main-menu__sub-list {
     position: absolute;
     background-color: #fff;
     z-index: 5;
-    transform: translateX(-100vw);
+    transform: translateX(-150%);
     top: -45px;
-    width: 120%;
-    height: 150%;
+    width: 100%;
+    height: 100vh;
     padding: 0;
     transition: all .4s;
 

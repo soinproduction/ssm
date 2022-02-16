@@ -224,7 +224,7 @@
             <div class="aside-filters__select">
               <div class='select'>
                 <div class='select__header'>
-                  <span class='select__current'>Выбор по стоимости</span>
+                  <span class='select__current'>По типу:</span>
                   <div class='select__icon'>
                     <svg width="12" height="8">
                       <use href='img/sprite/sprite.svg#filter-arrow'></use>
@@ -234,13 +234,22 @@
                 <div class='select__body'>
                   <ul class='select__wrapp'>
                     <li class='select__item' data-choice='choosen'>
-                      <span>Выбор по стоимости</span>
+                      <span>Прямоугольные</span>
                     </li>
                     <li class='select__item' data-choice='choosen'>
-                      <span>Выбор по стоимости</span>
+                      <span>Круглые</span>
                     </li>
                     <li class='select__item' data-choice='choosen'>
-                      <span>Выбор по стоимости</span>
+                      <span>Бесшумные</span>
+                    </li>
+                    <li class='select__item' data-choice='choosen'>
+                      <span>Промышленные</span>
+                    </li>
+                    <li class='select__item' data-choice='choosen'>
+                      <span>Настенные</span>
+                    </li>
+                    <li class='select__item' data-choice='choosen'>
+                      <span>С обратным клапаном</span>
                     </li>
                   </ul>
                 </div>
@@ -980,8 +989,6 @@
                     </li>
                   </ul>
                 </div>
-
-
                 <div class="more-card">
                   <h3 class="main-subtitle">
                     Аналогичные товары
@@ -1349,25 +1356,57 @@
                   </div>
 
                 </div>
-
-
-
               </div>
-
-
-
-
-
-
-
-
 
          </div>
         </div>
 
 
       </div>
+
     </div>
+
+    <section class="form-section form-section--mobile">
+      <div class="container">
+        <div class="form-section__wrapper">
+          <h2 class="form-section__title">
+            Есть вопросы или предложения?
+          </h2>
+          <p class="form-section__subtitle">
+            Заполните форму ниже, и мы ответим в кратчайшие сроки по вопросам проектирования, монтажа или поставки оборудования.
+          </p>
+
+          <form action="#" class="main-form">
+            <div class="main-form__top">
+              <fieldset class="main-form__fieldset main-form__fieldset--mini">
+                <legend class="main-form__legend">Как вам обращаться</legend>
+                <input type="text" placeholder="ФИО" required>
+              </fieldset>
+              <fieldset class="main-form__fieldset main-form__fieldset--mini">
+                <legend class="main-form__legend">Контактный телефон</legend>
+                <input type="number" placeholder="+7 (000) 000-00-00" required>
+              </fieldset>
+
+              <fieldset class="main-form__fieldset">
+                <legend class="main-form__legend">Ваш вопрос</legend>
+                <textarea name="#" placeholder="Текст сообщения"></textarea>
+              </fieldset>
+            </div>
+
+            <div class="main-form__bottom">
+              <p class="main-form__text">
+                Нажимая кнопку «Отправить», вы соглашаетесь на обработку персональных данных и подтверждаете свое совершеннолетие в соответствии с политикой конфиденциальности.
+              </p>
+              <button type="submit" class="main-form__button">
+                Отправить
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
 
 
 

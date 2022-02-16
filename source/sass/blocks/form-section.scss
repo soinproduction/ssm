@@ -5,6 +5,12 @@
   background-position: center;
   background-repeat: no-repeat;
 
+  @media screen and (min-width: 1050px) {
+    &--mobile {
+      display: none;
+    }
+  }
+
   &__wrapper {
     max-width: 438px;
     width: 100%;

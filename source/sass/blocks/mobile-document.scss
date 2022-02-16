@@ -1,0 +1,27 @@
+@media screen and (min-width: 1050px) {
+  .mobile-document {
+    display: none;
+  }
+}
+
+
+.mobile-document {
+  padding: 20px 0 30px;
+  margin-bottom: 20px;
+
+  .document-box__title {
+    background-color: transparent;
+  }
+
+  .document-box__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media screen and (max-width: 575px) {
+  .mobile-document .document-box__list {
+    grid-template-columns: 100%;
+  }
+}

@@ -318,11 +318,6 @@ header {
   header {
     padding-top: 10px;
   }
-
-  .header-logo {
-    max-width: 70px;
-    display: flex;
-  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
@@ -349,11 +344,6 @@ header {
 
   header {
     padding-top: 10px;
-  }
-
-  .header-logo {
-    max-width: 70px;
-    display: flex;
   }
 
   .mobile-menu__contact {
@@ -392,8 +382,55 @@ header {
     display: none;
   }
 
-
-
-
 }
 
+
+@media screen and (min-width:320px) and (max-width: 1050px) {
+  .burger {
+    grid-area: burger;
+    align-self: center;
+  }
+
+  .header-logo {
+    grid-area: logo;
+    width: fit-content;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    img {
+      max-width: 320px;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  .mobile-basket {
+    grid-area: basket;
+    position: relative;
+    align-self: center;
+
+    .basket-btn__count {
+      top: 3px;
+      right: 3px;
+    }
+    svg {
+      fill: #2264d1;
+    }
+  }
+
+  .header-inner {
+    grid-area: inner;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    grid-gap: 0;
+    justify-content: space-between;
+    grid-template-areas:
+    "burger logo basket"
+    "inner inner inner";
+  }
+}
