@@ -3,14 +3,14 @@
   // top: 11px;
   // right: 0px;
   position: relative;
-  width: 40px;
+  width: 30px;
   height: 30px;
   cursor: pointer;
 }
 .burger span, .burger span:before, .burger span:after{
   width: 100%;
   position: absolute;
-  height: 4px;
+  height: 3px;
   background: #2264d1;
   display: block;
   transition: .3s;
@@ -44,13 +44,6 @@
 }
 .burger span.active{
   background: rgba(255, 255, 255, 0);
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1050px) {
-  .burger {
-    top: -5px;
-  }
 }
 
 @media screen and (min-width: 1050px) {

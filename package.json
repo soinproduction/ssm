@@ -1,8 +1,8 @@
 {
-  "name": "ssm",
+  "name": "JST_Shop",
   "version": "1.0.0",
   "private": true,
-  "description": "ssm project",
+  "description": "JST_Shop project",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "gulp-csso": "4.0.1",
